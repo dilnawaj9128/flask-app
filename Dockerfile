@@ -13,6 +13,9 @@ RUN pip install -r requirements.txt
 #Copy the code 
 COPY main.py .
 
+#Port expose
+EXPOSE 5000
+
 #env
 ENV PYTHONUNBUFFERED=1
 
