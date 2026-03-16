@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, redirect
 import mysql.connector
 import time
 
@@ -38,7 +38,7 @@ def index():
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    cursor.execute("SELECT name FROM students")
+    cursor.execute("SELECT name, course FROM students")
     students = cursor.fetchall()
 
     conn.close()
@@ -63,8 +63,7 @@ def submit():
     conn.commit()
     conn.close()
 
-    return jsonify({"message": f"{name} - {course} added!"})
-
+    return redirect("/")
 
 if __name__ == "__main__":
     init_db()
