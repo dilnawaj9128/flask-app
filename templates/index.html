@@ -1,9 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Student Form</title>
+    <style>
+        /* Unique Color Grading Background */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Glassmorphism Card Effect */
+        #messageForm {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #messageForm h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        /* Styled Inputs */
+        input[type="text"] {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 15px;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            color: #333;
+        }
+
+        input[type="text"]:focus {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transform: scale(1.02);
+        }
+
+        /* Gradient Button */
+        input[type="submit"] {
+            background: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+        }
+
+        input[type="submit"]:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        input[type="submit"]:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
 <form id="messageForm">
-
-<input type="text" name="name" placeholder="Student Name" required>
-
-<input type="text" name="course" placeholder="Course" required>
-
-<input type="submit" value="Add Student">
-
+    <h2>Registration</h2>
+    <input type="text" name="name" placeholder="Student Name" required>
+    <input type="text" name="course" placeholder="Course" required>
+    <input type="submit" value="Add Student">
 </form>
+
+</body>
+</html>
