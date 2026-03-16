@@ -1,19 +1,23 @@
-version: '3.8'
+version: "3.8"
 
 services:
 
   flask-app:
     build: .
-    context: .
-    container_name: flask-app
+    container_name: flask_app
     ports:
       - "5000:5000"
     depends_on:
-      - db
+      - mysql-db
     volumes:
       - .:/app
+    environment:
+      - DB_HOST=mysql-db
+      - DB_USER=root
+      - DB_PASSWORD=password123
+      - DB_NAME=student_db
 
-  db:
+  mysql-db:
     image: mysql:5.7
     container_name: mysql_db
     restart: always
