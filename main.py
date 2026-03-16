@@ -35,19 +35,18 @@ def init_db():
 
 @app.route("/")
 def index():
-
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    cursor.execute("SELECT name, course FROM students")
+    cursor.execute("SELECT name FROM students")
     students = cursor.fetchall()
 
     conn.close()
 
-    return render_template("index.html", students=students)
+    return render_template("index.html", messages=students)
 
 
-@app.route("/add", methods=["POST"])
+@app.route("/submit", methods=["POST"])
 def submit():
 
     name = request.form.get("name")
