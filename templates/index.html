@@ -1,102 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Management</title>
+<form id="messageForm">
 
-<style>
 
-body{
-    background: linear-gradient(120deg,#0f2027,#203a43,#2c5364);
-    font-family: Arial;
-}
-
-.flask-app{
-    width:500px;
-    margin:50px auto;
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0px 0px 10px rgba(0,0,0,0.3);
-}
-
-h2{
-    text-align:center;
-}
-
-input{
-    width:100%;
-    padding:10px;
-    margin-top:10px;
-}
-
-button{
-    width:100%;
-    padding:10px;
-    background:#007bff;
-    color:white;
-    border:none;
-    margin-top:10px;
-    cursor:pointer;
-}
-
-table{
-    width:100%;
-    margin-top:20px;
-    border-collapse:collapse;
-}
-
-th,td{
-    border:1px solid #ddd;
-    padding:8px;
-}
-
-th{
-    background:#007bff;
-    color:white;
-}
-
-</style>
-
-</head>
-<body>
-
-<div class="flask-app">
-
-<h2>Student Management System</h2>
-
-<form action="/add" method="POST">
 
 <input type="text" name="name" placeholder="Student Name" required>
 
+
+
 <input type="text" name="course" placeholder="Course" required>
 
-<button type="submit">Add Student</button>
+
+
+<input type="submit" value="Add Student">
+
+
 
 </form>
-
-<h3>Student List</h3>
-
-<table>
-
-<tr>
-<th>Name</th>
-<th>Course</th>
-</tr>
-
-{% for student in students %}
-
-<tr>
-<td>{{ student[1] }}</td>
-<td>{{ student[2] }}</td>
-</tr>
-
-{% endfor %}
-
-</table>
-
-</div>
-
-</body>
-</html>
