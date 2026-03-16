@@ -1,9 +1,63 @@
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f2f5; /* Light grey background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #messageForm {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input[type="text"] {
+        padding: 12px 15px;
+        border: 2px solid #e1e4e8;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.3s ease;
+        font-size: 16px;
+    }
+
+    input[type="text"]:focus {
+        border-color: #007bff; /* Primary Blue focus */
+    }
+
+    input[type="submit"] {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: transform 0.2s, background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background: linear-gradient(135deg, #0056b3, #004085);
+        transform: translateY(-2px);
+    }
+
+    input[type="submit"]:active {
+        transform: translateY(0);
+    }
+</style>
+
 <form id="messageForm" action="/submit" method="POST">
-
-<input type="text" name="name" placeholder="Student Name" required>
-
-<input type="text" name="course" placeholder="Course" required>
-
-<input type="submit" value="Add Student">
-
+    <h2 style="margin: 0 0 10px; color: #333; text-align: center;">Student Portal</h2>
+    <input type="text" name="name" placeholder="Student Name" required>
+    <input type="text" name="course" placeholder="Course" required>
+    <input type="submit" value="Add Student">
 </form>
