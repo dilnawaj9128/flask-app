@@ -16,23 +16,23 @@ pipeline{
                 echo "developer /tester test likh ke dega"
             }
         }
-        stage("push to docker hub"){
+        stage("Push to docker hub"){
             steps{
                 withCredentials([usernamePassword(
                     credentialsId:"dockerHubCreds",
-                    passwordVariable: "dockerHubPass",
-                    usernameVariable: "dockerHubUser"
+                passwordVariable:"dockerHubPass",
+                usernameVariable:"dockerHubUser"
                 )]){
                     sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
                     sh "docker image tag flask-app ${env.dockerHubUser}/flask-app"
-                    sh "docker push ${env.dockerHubUser}/flask-app:latest"
+                    sh "docker push ${env.dockerHubUser}/flak-app:latest"
                 }
             }
         }
-                stage("Deploy"){
+         stage("Deploy"){
             steps{
-                sh "docker compose down"
-                sh "docker compose up -d --build flask-app"
+                sh "docker-compose down"
+                sh "docker-compose up -d --build flask-app"
             }
         }
     }
