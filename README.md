@@ -14,4 +14,4 @@ A simple hands-on project to understand how 2-tier architecture works using Dock
 
 ## Commands used:
 - Build: `docker build -t student-app .`
-- Up: `docker-compose up`
+- Up: `docker-compose up
