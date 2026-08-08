@@ -10,7 +10,7 @@ A simple hands-on project to understand how 2-tier architecture works using Dock
 ### My Learnings
 - Containerizing a Python app.
 - Linking a DB container with an App container via Docker Network.
-- Using Docker Volumes for data persistence (so my data doesn't disappear).
+- Using Docker Volumes for data persistence (so my data doesn't disappear)
 
 ## Commands used:
 - Build: `docker build -t student-app .`
