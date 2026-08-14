@@ -3,7 +3,7 @@ A simple hands-on project to understand how 2-tier architecture works using Dock
 
 
 ### Setup
-1. Clone the repo.
+1. Clone the repo
 2. Run `docker-compose up --build`.
 3. The app will prompt you to enter student details.
 
