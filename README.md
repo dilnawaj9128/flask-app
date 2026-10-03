@@ -1,5 +1,5 @@
 # Student-DB-Docker-App
-A simple hands-on project to understand how 2-tier architecture works using Docker. 
+A simple hands-on project to understand how 2-tier architecture works using Docker
 
 
 ### Setup
